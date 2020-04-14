@@ -1,6 +1,6 @@
 window.addEventListener('load', () => {
     const canvas = document.querySelector('.canvas');
-    const ctx = canvas.getContext('2d');
+    const ctx = canvas.getContext('2d'); // context
 
     canvas.height = window.innerHeight;
     canvas.width = window.innerWidth;
@@ -24,6 +24,7 @@ window.addEventListener('load', () => {
 
         ctx.lineTo(event.clientX, event.clientY);
         ctx.stroke();
+        // below is added for being able to click for dots without having to drag
         ctx.beginPath();
         ctx.moveTo(event.clientX, event.clientY)
     }
